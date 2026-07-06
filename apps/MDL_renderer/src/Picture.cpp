@@ -1454,6 +1454,8 @@ bool Picture::createIES(const IESData& ies)
   std::vector<float> candelas;
 
   MY_ASSERT(0 < ies.photometric.numHorizontalAngles);
+  if(!(0 < ies.photometric.numHorizontalAngles))
+    return false;
 
   const float minHorizontalAngle = ies.photometric.horizontalAngles[0];
   const float maxHorizontalAngle = ies.photometric.horizontalAngles[ies.photometric.numHorizontalAngles - 1];

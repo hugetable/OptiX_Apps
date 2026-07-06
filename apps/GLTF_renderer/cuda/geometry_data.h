@@ -56,9 +56,10 @@
 #define ATTR_WEIGHTS_0  0x00100000u
 #define ATTR_WEIGHTS_1  0x00200000u
 
-// FIXME GeometryData currently supports only TriangleMesh geometries.
+// TODO extend: GeometryData currently supports only TriangleMesh and SphereMesh geometries.
 // Keep the structure to be able to add more geometric primitives of the glTF specs in the future.
-// For example points could be shown as spheres and lines as linear curves. 
+// For example implement lines as linear curves. 
+// Points are implemented as spheres.
 // That wouldn't be following the specified screen-space pixel sizes for those but could be interesting nonetheless.
 struct GeometryData
 {
@@ -69,6 +70,7 @@ struct GeometryData
     UNKNOWN_TYPE  = 2
   };
 
+  // TODO union struct TriangleMesh, struct SphereMesh ?
   struct __align__(8) TriangleMesh
   {
     uint3*   indices;                       // INDICES
