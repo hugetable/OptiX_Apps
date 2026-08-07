@@ -84,7 +84,8 @@ private:
   int m_heightResolution;
 
   GLint   m_numDevices;                       // Number of OpenGL devices. Normally 1, unless multicast is enabled.
-  GLubyte m_deviceUUID[24][GL_UUID_SIZE_EXT]; // Max. 24 devices supported. 16 bytes identifier.
+  enum Const { MAX_NUM_DEVICES = 24 };
+  GLubyte m_deviceUUID[MAX_NUM_DEVICES][GL_UUID_SIZE_EXT]; // 16 bytes identifier.
   //GLubyte m_driverUUID[GL_UUID_SIZE_EXT];   // 16 bytes identifier, unused.
   GLubyte m_deviceLUID[GL_LUID_SIZE_EXT];     //  8 bytes identifier.
   GLint   m_nodeMask;                         // Node mask used together with the LUID to identify OpenGL device uniquely.

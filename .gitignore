@@ -13,3 +13,4 @@
 .vscode/
 apps/GLTF_renderer/build/
 .vs/
+apps/GLTF_renderer/build*

@@ -233,6 +233,7 @@ source_group( "headers"         FILES ${HEADERS} )
 source_group( "sources"         FILES ${SOURCES} )
 source_group( "shaders"         FILES ${SHADERS} )
 source_group( "shaders_headers" FILES ${SHADERS_HEADERS} )
+source_group( "kernels"         FILES ${KERNELS} )
 source_group( "prg"             FILES ${PROGRAM_MODULES} )
 source_group( "ptx"             FILES ${KERNEL_MODULES} )
 
